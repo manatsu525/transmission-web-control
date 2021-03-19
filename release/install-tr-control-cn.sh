@@ -10,7 +10,7 @@ ORG_INDEX_FILE="index.original.html"
 INDEX_FILE="index.html"
 TMP_FOLDER="/tmp/tr-web-control"
 PACK_NAME="master.tar.gz"
-WEB_HOST="https://github.com/ronggang/transmission-web-control/archive/"
+WEB_HOST="https://github.com/manatsu525/transmission-web-control/releases/download/v1.6.1/"
 DOWNLOAD_URL="$WEB_HOST$PACK_NAME"
 # 安装类型
 # 1 安装至当前 Transmission Web 所在目录
@@ -433,7 +433,7 @@ getTransmissionPath() {
 # 获取最后的发布版本号
 # 因在源码库里提交二进制文件不便于管理，以后将使用这种方式获取最新发布的版本
 getLatestReleases() {
-	VERSION=`wget -O - https://api.github.com/repos/ronggang/transmission-web-control/releases/latest | grep tag_name | head -n 1 | cut -d '"' -f 4`
+	VERSION="v1.6.1-update1"
 }
 
 # 检测 Transmission 进程是否存在
